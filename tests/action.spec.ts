@@ -1,7 +1,8 @@
 import { test, expect } from '@playwright/test';
 import HomePage from '../pages/HomePage';
 import LoginPage from '../pages/LoginPage';
-import testData from '../testData/test.json';
+import { loginHelper } from '../utils/loginHelper';
+const testData = require('../testData/test.json');
 
   let homePage: HomePage;
   let loginPage: LoginPage;
@@ -12,10 +13,7 @@ import testData from '../testData/test.json';
     homePage = new HomePage(page);
     loginPage = new LoginPage(page);
 
-    await page.goto('/');
-
-    await loginPage.loginUser(testData.Valid_Username, testData.Valid_Password);
-    await expect(page).toHaveURL(/.*amazon.*/);
+    await loginHelper(page, testData.Valid_Username, testData.Valid_Password);
   });
 
   test('Find lowest and highest mobile price with product name', async ({ page}) => {

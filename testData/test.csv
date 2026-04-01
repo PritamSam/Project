@@ -1,4 +1,4 @@
-Name	Value
-Valid_Username	ABC@gmail.com
-Valid_Password	ABC
-Valid_Filter	mobile
+Name,Value
+Valid_Username,ABC@gmail.com
+Valid_Password,ABC
+Valid_Filter,mobile

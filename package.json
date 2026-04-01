@@ -2,7 +2,7 @@
   "name": "playwright_project",
   "version": "1.0.0",
   "scripts": {
-    "convert": "ts-node-esm utils/csvToJson.mts",
+    "convert": "npx ts-node utils/csvToJson.ts",
     "test": "npx playwright test"
   },
   "devDependencies": {

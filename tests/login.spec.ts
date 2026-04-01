@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import LoginPage from '../pages/LoginPage';
-import testData from '../testData/test.json';
+const testData = require('../testData/test.json');
 
 let loginPage: LoginPage;
 

@@ -12,8 +12,10 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
 
   reporter: [
-  ['html', { outputFolder: 'report/html-report', open: 'never' }]
-],
+  ['html', { outputFolder: 'report/playwright-report', open: 'never' }]
+  ],
+
+  outputDir: 'report',
   
   use: {
     baseURL: 'https://www.amazon.in/',
