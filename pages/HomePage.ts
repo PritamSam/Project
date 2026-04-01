@@ -49,7 +49,6 @@ class HomePage{
         await newPage.waitForLoadState();
         const details = await newPage.locator('#feature-bullets li .a-list-item').allTextContents();
         return details;
-
     }
 
 }

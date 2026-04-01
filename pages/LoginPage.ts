@@ -25,6 +25,12 @@ class LoginPage {
         await this.password.fill(password);
         await this.signInButton.click();
     }
+
+    async loginWithInvalidUsername(username: string) {
+        await this.signin.click();
+        await this.username.fill(username);
+        await this.continueButton.click();
+    }
 }
 
 export default LoginPage;
